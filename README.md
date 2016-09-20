@@ -7,8 +7,5 @@ Phase 1 is to populate with Carbon Black Response queries. Later phases will inc
 * API calls to create watchlists
 * Additional tools and information to automate everything I can during Carbon Black Response deployments
 
-# Versioning
-We use SemVer for versioning.
-
 # Acknowledgements
 Place holder to credit people if content is used from the Carbon Black exchange.
