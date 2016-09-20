@@ -28,7 +28,7 @@
 ```filemod:*.pst AND -process_name:outlook.exe```
 
 ##### Processes accessing the TOR network.
-```alliance_score_tor:*```
+```alliance_score_tor:* ```
 
 ##### Known malware that is network aware
 ```alliance_score_virustotals:[5 TO *] AND netconn_count:[1 TO *]```
