@@ -1,13 +1,15 @@
-# Programs launched from a shell or script that are network aware and not trusted. 
+# Carbon Black Response Queries
+
+### Programs launched from a shell or script that are network aware and not trusted. 
 (process_name:powershell.exe OR parent_name:cmd.exe) AND netconn_count:[1 TO *] -alliance_score_srstruct:*
 
-#  Services that are network aware and not trusted
+### Services that are network aware and not trusted
 parent_name:services.exe AND netconn_count:[1 TO *] -alliance_score_srstrust:*
 
-# Scheduled tasks that are network aware and not trusted
+### Scheduled tasks that are network aware and not trusted
 parent_name:taskeng.exe AND netconn_cont:[1 TO *] -alliance_score_srstrust:*
 
-# Non browsers connecting to foreign domains
+### Non browsers connecting to foreign domains
 (domain:.cn OR domain:.ru OR domain:.ir) -process_name:iexplore.exe -process_name:firefox.exe -process_name:chrome.exe -process_name:opera.exe
 
 # PsExec and variants
